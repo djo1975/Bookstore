@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Books() {
   return (
@@ -7,9 +8,7 @@ function Books() {
       <ul>
         {/* Display list of books */}
       </ul>
-      <form>
-        {/* Form for adding a new book */}
-      </form>
+      <Link to="/books/add">Add a new book</Link>
     </div>
   );
 }
