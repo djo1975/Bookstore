@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div>
 
-  <h1><b>Math Magicians</b></h1><br/><br/>
+  <h1><b>Bookstore: initialize project with components</b></h1><br/><br/>
 
 </div>
 
@@ -24,11 +24,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Math magicians: full website<a name="about-project"></a>
+# 📖Bookstore: initialize project with components<a name="about-project"></a>
 
-**Math magicians: full website**
+**Bookstore: initialize project with components**
 
-In this project, you will create a full website for the Math magicians app, consisting of several pages and using the components you already created.
+This project will lay the foundations for your Bookstore website. You will create the user interface using React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,7 +49,7 @@ In this project, you will create a full website for the Math magicians app, cons
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[you can see the live demo through this link](https://unique-dragon-7511a0.netlify.app/quotes)
+[you can see the live demo through this link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,7 +83,7 @@ To clone this repository to your desired folder, follow the steps below:
 
 - Follow the steps below
 
-  - Visit this link "https://github.com/djo1975/mathMagicians"
+  - Visit this link "https://github.com/djo1975/Bookstore"
   - Click the green button labelled "code"
   - Select the "Open with GitHub Desktop" option
   - After the GitHub Desktop add opens, click the "clone repo" button
@@ -107,7 +107,7 @@ To run the project, execute the following command:
 
 You can deploy this project by:
 
-- visiting your repository on [GitHub](https://github.com/djo1975/mathMagicians)
+- visiting your repository on [GitHub](https://github.com/djo1975/Bookstore)
 - Click on settings
 - Go to the "Pages" option
 - Select the main branch and save
@@ -119,12 +119,6 @@ You can deploy this project by:
 - GitHub: [@djo1975](https://github.com/djo1975)
 - Twitter: [@MladanIlic](https://twitter.com/MladanIlic)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mladan-ilic-0528a2256/)
-
-👤 **Christian Hakizimana**
-
-- GitHub: [@githubhandle](https://github.com/hakichris)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/hakichris)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
