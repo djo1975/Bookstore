@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div>
 
-  <h1><b>Bookstore: initialize project with components</b></h1><br/><br/>
+  <h1><b>Bookstore:initialize project with components</b></h1><br/><br/>
 
 </div>
 
