@@ -1,29 +1,54 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
-function Form({ addBook }) {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+const Form = () => {
+  const [state, setState] = useState({
+    title: '',
+    author: '',
+  });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    addBook({ title, author });
-    setTitle('');
-    setAuthor('');
+  const history = useHistory();
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(state); // log the form data for testing
+    // TODO: add code to submit the form data to the server
+    history.push('/books'); // redirect to the books page
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Title:
-        <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
-      </label>
-      <label>
-        Author:
-        <input type="text" value={author} onChange={(event) => setAuthor(event.target.value)} />
-      </label>
-      <button type="submit">Add Book</button>
-    </form>
+    <>
+      <h3>Add a New Book</h3>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="title">
+          <input
+            placeholder="Book title"
+            name="title"
+            type="text"
+            value={state.title}
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="author">
+          <input
+            placeholder="Author"
+            name="author"
+            type="text"
+            value={state.author}
+            onChange={handleChange}
+          />
+        </label>
+        <button type="submit">Add Book</button>
+      </form>
+    </>
   );
-}
+};
 
 export default Form;
