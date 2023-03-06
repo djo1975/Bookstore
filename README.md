@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div>
 
-  <h1><b>Bookstore:reducers-actions</b></h1><br/><br/>
+  <h1><b>Bookstore: add reducers and actions</b></h1><br/><br/>
 
 </div>
 
@@ -24,11 +24,14 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖Bookstore: initialize project with components<a name="about-project"></a>
+# 📖Bookstore: add reducers and actions<a name="about-project"></a>
 
-**Bookstore: initialize project with components**
+**Bookstore: add reducers and actions**
 
-This project will lay the foundations for your Bookstore website. You will create the user interface using React.
+In this step, you will implement Redux Toolkit inside of a React application. You will:
+
+- Setup a Redux store
+- Create a slice to save your state and reducers
 
 ## 🛠 Built With <a name="built-with"></a>
 
