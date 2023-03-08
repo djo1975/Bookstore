@@ -1,53 +1,35 @@
-import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/BooksSlices';
 
 const Form = () => {
-  const [state, setState] = useState({
-    title: '',
-    author: '',
-  });
+  const [book, setBook] = useState({ booktitle: '', author: '' });
+  const dispatch = useDispatch();
 
-  const history = useHistory();
-
-  const handleChange = (e) => {
-    setState({
-      ...state,
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setBook((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(state); // log the form data for testing
-    // TODO: add code to submit the form data to the server
-    history.push('/books'); // redirect to the books page
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(addBook(book));
+    setBook({ booktitle: '', author: '' });
   };
 
   return (
-    <>
-      <h3>Add a New Book</h3>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">
-          <input
-            placeholder="Book title"
-            name="title"
-            type="text"
-            value={state.title}
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor="author">
-          <input
-            placeholder="Author"
-            name="author"
-            type="text"
-            value={state.author}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="submit">Add Book</button>
-      </form>
-    </>
+    <form onSubmit={handleSubmit}>
+      <h3>Add new book</h3>
+      <label htmlFor="title">
+        Book Title:
+        <input type="text" name="booktitle" value={book.booktitle} onChange={handleChange} />
+      </label>
+      <label htmlFor="author">
+        Author Name:
+        <input type="text" name="author" value={book.author} onChange={handleChange} />
+      </label>
+      <button type="submit">Add book</button>
+    </form>
   );
 };
 

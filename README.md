@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div>
 
-  <h1><b>Bookstore: add reducers and actions</b></h1><br/><br/>
+  <h1><b>Bookstore: Use Redux in React components</b></h1><br/><br/>
 
 </div>
 
@@ -24,14 +24,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖Bookstore: add reducers and actions<a name="about-project"></a>
+# 📖Bookstore: Use Redux in React components<a name="about-project"></a>
 
-**Bookstore: add reducers and actions**
+**Bookstore: Use Redux in React components**
 
-In this step, you will implement Redux Toolkit inside of a React application. You will:
-
-- Setup a Redux store
-- Create a slice to save your state and reducers
+In this step I used a Redux store to display books. Implemented react-redux in order to connect the store and then access the state variables (accessed through useSelector) and state modifiers (which is a combination of a reducer and useDispatch).
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -52,7 +49,7 @@ In this step, you will implement Redux Toolkit inside of a React application. Yo
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[you can see the live demo through this link]()
+[ Demo is not available for this stage of progress]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
