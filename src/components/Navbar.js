@@ -11,7 +11,6 @@ function Navbar() {
         <li>
           <Link to="/categories">Categories</Link>
         </li>
-        <li><Link to="/book">Book</Link></li>
       </ul>
     </nav>
   );

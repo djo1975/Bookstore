@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
   const [state, setState] = useState({
@@ -7,7 +7,7 @@ const Form = () => {
     author: '',
   });
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setState({
@@ -20,7 +20,7 @@ const Form = () => {
     e.preventDefault();
     console.log(state); // log the form data for testing
     // TODO: add code to submit the form data to the server
-    history.push('/books'); // redirect to the books page
+    navigate('/books'); // redirect to the books page
   };
 
   return (

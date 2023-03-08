@@ -1,35 +1,61 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { v4 as uuidv4 } from 'uuid';
 
-// Define initial state for books
-const initialBooksState = {
-  books: [],
+const ADD_BOOK = 'ADD_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
+
+const initialState = {
+  books: [
+    {
+      item_id: uuidv4(),
+      title: 'The Great Gatsby',
+      author: 'John Smith',
+      category: 'Fiction',
+    },
+    {
+      item_id: uuidv4(),
+      title: 'Anna Karenina',
+      author: 'Leo Tolstoy',
+      category: 'Fiction',
+    },
+    {
+      item_id: uuidv4(),
+      title: 'The Selfish Gene',
+      author: 'Richard Dawkins',
+      category: 'Nonfiction',
+    },
+  ],
 };
 
-// Define slice for books state
-const booksSlice = createSlice({
-  name: 'books',
-  initialState: initialBooksState,
-  reducers: {
-    addBook: (state, action) => {
-      const { title, author } = action.payload;
-      const newBook = { title, author };
-      return {
-        ...state,
-        books: [...state.books, newBook],
-      };
-    },
-    removeBook: (state, action) => {
-      const { title, author } = action.payload;
-      const bookToRemove = { title, author };
-      const updatedBooks = state.books.filter((book) => book.title !== bookToRemove.title
-      && book.author !== bookToRemove.author);
-      return {
-        ...state,
-        books: updatedBooks,
-      };
-    },
-  },
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
 });
 
-export const { addBook, removeBook } = booksSlice.actions;
-export default booksSlice.reducer;
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  book,
+});
+
+const bookReducer = (state = initialState, action) => {
+  if (action.type === ADD_BOOK) {
+    const newBook = {
+      item_id: uuidv4(),
+      title: action.book.booktitle,
+      author: action.book.author,
+    };
+    return {
+      ...state,
+      books: [...state.books, newBook],
+    };
+  }
+
+  if (action.type === REMOVE_BOOK) {
+    return {
+      ...state,
+      books: state.books.filter((book) => book.item_id !== action.id),
+    };
+  }
+
+  return state;
+};
+export default bookReducer;
