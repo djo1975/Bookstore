@@ -28,7 +28,7 @@
 
 **Bookstore: Use Redux in React components**
 
-In this step you will use a Redux store to display books. You'll implement react-redux in order to connect your store and then access your state variables (accessed through useSelector) and state modifiers (which will be a combination of a reducer and useDispatch).
+In this step I used a Redux store to display books. Implemented react-redux in order to connect the store and then access the state variables (accessed through useSelector) and state modifiers (which is a combination of a reducer and useDispatch).
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,7 +49,7 @@ In this step you will use a Redux store to display books. You'll implement react
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[you can see the live demo through this link]()
+[ Demo is not available for this stage of progress]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
