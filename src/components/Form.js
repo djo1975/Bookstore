@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/BooksSlices';
 
 const Form = () => {
-  const [book, setBook] = useState({ title: '', author: '', category: '' });
+  const [book, setBook] = useState({ booktitle: '', author: '' });
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
@@ -14,23 +14,19 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addBook(book));
-    setBook({ title: '', author: '', category: '' });
+    setBook({ booktitle: '', author: '' });
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <h3>Add new book</h3>
       <label htmlFor="title">
-        Title:
-        <input type="text" name="title" value={book.title} onChange={handleChange} />
+        Book Title:
+        <input type="text" name="booktitle" value={book.booktitle} onChange={handleChange} />
       </label>
       <label htmlFor="author">
-        Author:
+        Author Name:
         <input type="text" name="author" value={book.author} onChange={handleChange} />
-      </label>
-      <label htmlFor="category">
-        Category:
-        <input type="text" name="category" value={book.category} onChange={handleChange} />
       </label>
       <button type="submit">Add book</button>
     </form>
