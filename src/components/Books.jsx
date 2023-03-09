@@ -1,22 +1,40 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
+import { asyncCreate, asyncRemove, asyncLoad } from '../redux/API/bookstoreAPI';
 
 const Books = () => {
-  // const dispatch = useDispatch();
   const { books } = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(asyncLoad()); // dispatch the asyncLoad action creator
+  }, [dispatch]);
+
+  const handleAddBook = (book) => {
+    dispatch(asyncCreate(book));
+  };
+
+  const handleRemoveBook = (id) => {
+    dispatch(asyncRemove(id));
+  };
+
   return (
     <>
-      {books.map((book) => (
-        <Book
-          key={book.item_id}
-          id={book.item_id}
-          category={book.category}
-          title={book.title}
-          author={book.author}
-        />
-      ))}
-      <Form />
+      <div>
+        {books.map((book) => (
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            category={book.category}
+            title={book.title}
+            author={book.author}
+            handleRemoveBook={() => handleRemoveBook(book.item_id)}
+          />
+        ))}
+      </div>
+      <Form handleAddBook={handleAddBook} />
     </>
   );
 };
