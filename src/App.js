@@ -14,6 +14,7 @@ function App() {
         <div>
           <Navbar />
           <Routes>
+            <Route exact path="/" component={Books} />
             <Route path="/books" element={<Books />} />
             <Route path="/categories" element={<Categories />} />
           </Routes>

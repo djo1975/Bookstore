@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div>
 
-  <h1><b>Bookstore: Use Redux in React components</b></h1><br/><br/>
+  <h1><b>Bookstore: connect to API</b></h1><br/><br/>
 
 </div>
 
@@ -24,11 +24,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖Bookstore: Use Redux in React components<a name="about-project"></a>
+# 📖Bookstore: connect to API<a name="about-project"></a>
 
-**Bookstore: Use Redux in React components**
+**Bookstore: connect to API**
 
-In this step I used a Redux store to display books. Implemented react-redux in order to connect the store and then access the state variables (accessed through useSelector) and state modifiers (which is a combination of a reducer and useDispatch).
+In this project, I connected my React & Redux application to an existing API to create and remove books from a server.
 
 ## 🛠 Built With <a name="built-with"></a>
 

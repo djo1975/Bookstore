@@ -1,29 +1,9 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
+const LOAD_BOOK = 'LOAD_BOOK';
 
 const initialState = {
-  books: [
-    {
-      item_id: uuidv4(),
-      title: 'The Great Gatsby',
-      author: 'John Smith',
-      category: 'Fiction',
-    },
-    {
-      item_id: uuidv4(),
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
-      category: 'Fiction',
-    },
-    {
-      item_id: uuidv4(),
-      title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
-    },
-  ],
+  books: [],
 };
 
 export const removeBook = (id) => ({
@@ -36,16 +16,16 @@ export const addBook = (book) => ({
   book,
 });
 
+export const loadBook = (books) => ({
+  type: LOAD_BOOK,
+  books,
+});
+
 const bookReducer = (state = initialState, action) => {
   if (action.type === ADD_BOOK) {
-    const newBook = {
-      item_id: uuidv4(),
-      title: action.book.booktitle,
-      author: action.book.author,
-    };
     return {
       ...state,
-      books: [...state.books, newBook],
+      books: [...state.books, action.book],
     };
   }
 
@@ -53,6 +33,22 @@ const bookReducer = (state = initialState, action) => {
     return {
       ...state,
       books: state.books.filter((book) => book.item_id !== action.id),
+    };
+  }
+
+  if (action.type === LOAD_BOOK) {
+    const bookTemp = [];
+    Object.entries(action.books).forEach(([key, value]) => {
+      bookTemp.push({
+        item_id: key,
+        title: value[0].title,
+        category: value[0].category,
+        author: value[0].author,
+      });
+    });
+    return {
+      ...state,
+      books: bookTemp,
     };
   }
 

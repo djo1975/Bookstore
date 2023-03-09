@@ -1,30 +1,54 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/BooksSlices';
+import { asyncRemove } from '../redux/API/bookstoreAPI';
 
-function Book({ id, title, author }) {
+const Book = (book) => {
   const dispatch = useDispatch();
+  const {
+    category,
+    title,
+    author,
+    id,
+  } = book;
 
-  const handleRemove = () => {
-    dispatch(removeBook(id));
+  const handleRemove = async (id) => {
+    dispatch(
+      asyncRemove({
+        item_id: id,
+      }),
+    );
   };
-
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>{author}</p>
-      <button type="button" onClick={handleRemove}>
-        Remove
-      </button>
-    </div>
+    <>
+      <div>
+        <ul>
+          <li>
+            {category}
+          </li>
+          <li>
+            {title}
+          </li>
+          <li>
+            {author}
+          </li>
+          <li>
+            <div />
+            <button
+              type="button"
+              onClick={() => handleRemove(id)}
+            >
+              <pre>Remove</pre>
+            </button>
+            <div />
+          </li>
+        </ul>
+        <div>
+          <div>
+            <div />
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
-
-Book.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
 };
 
 export default Book;
