@@ -48,8 +48,7 @@ I fallowed Zeplin design: https://app.zeplin.io/project/5b35a9e13227086040f8eb75
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
-([ https://shimmering-kangaroo-bc7705.netlify.app/Books])
+## 🚀 [Live Demo](https://shimmering-kangaroo-bc7705.netlify.app/Books) <a name="live-demo"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
