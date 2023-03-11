@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div>
 
-  <h1><b>Bookstore: connect to API</b></h1><br/><br/>
+  <h1><b>Bookstore: styling</b></h1><br/><br/>
 
 </div>
 
@@ -24,11 +24,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖Bookstore: connect to API<a name="about-project"></a>
+# 📖Bookstore: styling<a name="about-project"></a>
 
-**Bookstore: connect to API**
+**Bookstore: styling**
 
-In this project, I connected my React & Redux application to an existing API to create and remove books from a server.
+I fallowed Zeplin design: https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,7 +49,7 @@ In this project, I connected my React & Redux application to an existing API to 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[ Demo is not available for this stage of progress]()
+([ https://shimmering-kangaroo-bc7705.netlify.app/Books])
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
