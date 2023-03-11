@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { asyncCreate } from '../redux/API/bookstoreAPI';
+import styles from '../Style/Book.module.css';
 
 const Form = () => {
   const [state, setState] = useState({
@@ -11,6 +12,14 @@ const Form = () => {
   });
 
   const dispatch = useDispatch();
+
+  const resetForm = () => {
+    setState({
+      booktitle: '',
+      auther: '',
+      category: '',
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,6 +36,8 @@ const Form = () => {
         category: '',
       }),
     );
+
+    resetForm(); // pozovemo funkciju za resetovanje forme
   };
 
   const handleChange = (e) => {
@@ -38,16 +49,17 @@ const Form = () => {
 
   return (
     <>
-      <div />
-      <h3>
+      <div className={styles.Line3} />
+      <h3 className={styles.Formtitle}>
         ADD NEW BOOK
       </h3>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className={styles.formContainer}>
           <label htmlFor="booktitle">
             <input
               placeholder="Book title"
               name="booktitle"
+              className={styles.formInput}
               type="text"
               value={state.booktitle}
               onChange={handleChange}
@@ -55,6 +67,7 @@ const Form = () => {
           </label>
           <label htmlFor="auther">
             <input
+              className={styles.formInput2}
               placeholder="Auther"
               name="auther"
               type="text"
@@ -64,6 +77,7 @@ const Form = () => {
           </label>
           <button
             type="button"
+            className={styles.addBtn}
             onClick={handleSubmit}
           >
             Add book

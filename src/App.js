@@ -5,13 +5,14 @@ import store from './redux/store';
 import Books from './components/Books';
 import Categories from './components/Categories';
 import Navbar from './components/Navbar';
-import './App.css';
+import './Style/App.css';
+import styles from './Style/bookStoreApp.module.css';
 
 function App() {
   return (
     <Provider store={store}>
       <Router>
-        <div>
+        <div className={styles.pageContainer}>
           <Navbar />
           <Routes>
             <Route exact path="/" component={Books} />

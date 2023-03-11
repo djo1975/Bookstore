@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+.genreText {
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(94, 91, 91);
+}
+
+.titleText {
+  height: 1.813rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.LessonPanel {
+  display: flex;
+  justify-content: space-between;
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 1rem 6.25rem;
+  padding: 2rem 5rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px white;
+  background-color: white;
+  align-items: center;
+}
+
+.SuzanneCollins {
+  height: 1.188rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 100;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.option {
+  margin-top: 1.313rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.oval2 {
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+}
+
+.progressTest {
+  display: flex;
+  flex-direction: column;
+}
+
+.updateBtn {
+  width: 11rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  color: white;
+}
+
+.bookInfo2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.43rem;
+}
+
+.chapter {
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.progcontainer {
+  display: flex;
+}
+
+pre {
+  background-color: white;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.addBtn {
+  flex: auto;
+  font-size: medium;
+  width: 10rem;
+  height: 2.813rem;
+  margin: 1.1879999999999997rem 7.25rem 0 5rem;
+  padding: 0.801rem 2rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  color: white;
+}
+
+.Formtitle {
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 6.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.formInput {
+  width: 100%;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 6.25rem;
+  padding: 0.813rem 15rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.formInput2 {
+  width: 80%;
+  height: 2.813rem;
+  margin: 1.1879999999999997rem 8.125rem 0;
+  padding: 0.375rem 0.938rem 0.563rem 2rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: normal;
+  color: var(--black-two);
+}
+
+.complete {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.wrec {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.currentChapter {
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+}
+
+.Line {
+  width: 0.125rem;
+  height: 1.5rem;
+  margin: 0 1.063rem 0 0.938rem;
+  border: solid 1px #e8e8e8;
+}
+
+.Line2 {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 1.125rem 3rem 0 1.5rem;
+  border: solid 1px #e8e8e8;
+}
+
+.Line3 {
+  width: 77vw;
+  height: 0.125rem;
+  margin: 2.5rem 0.063rem 1.813rem 6.25rem;
+  border: solid 1px #e8e8e8;
+}
