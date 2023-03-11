@@ -1,0 +1,23 @@
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c7c7c7;
+  --very-light-pink: #c4c4c4;
+  --pale-grey: #f5f6fa;
+  --black-5: rgba(0, 0, 0, 0.05);
+  --z: #fafafa;
+  --black-two: #121212;
+  --medium-blue: #307bbe;
+  --azure: #0290ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}

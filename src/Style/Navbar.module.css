@@ -1,0 +1,44 @@
+.BookstoreCMS {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  white-space: nowrap;
+  margin-left: 6rem;
+}
+
+.panelbg {
+  display: flex;
+  width: 100%;
+  height: 5.938rem;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 7vw;
+  border-radius: 4px;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.panelbg a {
+  text-decoration: none;
+  margin-left: 0;
+}
+
+.iconContainer {
+  margin-left: auto;
+  margin-right: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding: 5px;
+  height: 2rem;
+  border-radius: 50%;
+  border: solid 1px rgb(165, 162, 162);
+}

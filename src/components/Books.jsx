@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
 import { asyncCreate, asyncRemove, asyncLoad } from '../redux/API/bookstoreAPI';
+import styles from '../Style/Books.module.css';
 
 const Books = () => {
   const { books } = useSelector((state) => state.books);
@@ -22,7 +23,7 @@ const Books = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.bookContainer}>
         {books.map((book) => (
           <Book
             key={book.item_id}
